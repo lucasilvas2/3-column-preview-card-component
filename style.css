@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p, a{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    color: var(--Transparent-white-paragraphs);
+}
+h1{
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--Very-light-gray-background-headings-buttons);
+    text-transform: uppercase;
+}
+
+body{  
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+.card{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 12px;
+    margin: 2rem;
+    overflow: hidden;
+}
+.conteudos{
+    padding: 40px;
+}
+.conteudos > *:not(:first-child){
+    margin-top: 40px;
+}
+.sedans{
+    background-color: var(--Bright-orange);
+}
+.suvs{
+    background-color: var(--Dark-cyan);
+}
+.luxury{
+    background-color: var(--Very-dark-cyan);
+}
+.conteudos a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    border: 2px solid var(--Very-light-gray-background-headings-buttons);
+    border-radius: 60px;
+    padding: 13px 27px;
+    transition: all .4s ease-in-out;
+}
+
+.sedans a{
+    color: var(--Bright-orange);
+}
+.suvs a{
+    color: var(--Dark-cyan);
+}
+.luxury a{
+    color: var(--Very-dark-cyan);
+}
+
+a:hover{
+    color: var(--Transparent-white-paragraphs);
+    background-color: hsla(0, 0%, 100%, 0);
+}
+
+@media(max-width: 780px){
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+
